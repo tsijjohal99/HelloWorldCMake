@@ -10,10 +10,9 @@ set(MY_STRING "This is a string")
 set(MY_OTHER_STRING "This is a string")
 set(my_value 4)
 
-while(my_value LESS 50)
-    message(STATUS "Value is ${my_value}")
-    math(EXPR my_value "${my_value} + 1")
-endwhile()
+foreach(item IN ITEMS foo bar baz qaz)
+    message(STATUS "Item is: ${item}")
+endforeach()
 
 add_subdirectory(say-hello)
 add_subdirectory(hello-exe)
