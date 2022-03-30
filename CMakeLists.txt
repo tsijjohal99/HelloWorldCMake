@@ -6,10 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(HelloWorld VERSION 1.0)
 
-set(my_bool TRUE)
+set(MY_STRING "This is a string")
+set(MY_OTHER_STRING "This is a string")
+set(my_value 4)
 
-if(my_bool)
+if((MY_STRING STREQUAL MY_OTHER_STRING) AND "1" EQUAL my_value)
     message(STATUS "Condition was met")
+elseif(MY_OTHER_STRING MATCHES "string$")
+     message(STATUS "Variable ends with the word 'string'")
 else()
     message(STATUS "Condition failed")
 endif()
