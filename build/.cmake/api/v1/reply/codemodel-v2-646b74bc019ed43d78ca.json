@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "say-hello",
+					"jsonFile" : "directory-say-hello-Debug-0218f77e5e84cf6e1593.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "say-hello",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "hello-exe",
+					"jsonFile" : "directory-hello-exe-Debug-4019c33aa9dc252ee2cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "hello-exe",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "HelloWorld",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "HelloWorld::@2fd522105322d56da9ab",
+					"jsonFile" : "target-HelloWorld-Debug-67e3f672234708505cef.json",
+					"name" : "HelloWorld",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "say-hello::@5c20bfcd32ac02acf58a",
+					"jsonFile" : "target-say-hello-Debug-b0c5589a25470f87c71e.json",
+					"name" : "say-hello",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/msys64/home/local_admin/HelloWorld/build",
+		"source" : "C:/msys64/home/local_admin/HelloWorld"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles /C/msys64/home/local_admin/HelloWorld/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles /C/msys64/home/local_admin/HelloWorld/build/say-hello//CMakeFiles/progress.marks
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named say-hello
+# Convenience name for target.
+say-hello/CMakeFiles/say-hello.dir/rule:
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/CMakeFiles/say-hello.dir/rule
+.PHONY : say-hello/CMakeFiles/say-hello.dir/rule
 
-# Build rule for target.
-say-hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello
+# Convenience name for target.
+say-hello: say-hello/CMakeFiles/say-hello.dir/rule
 .PHONY : say-hello
 
 # fast build rule for target.
 say-hello/fast:
-	$(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
 .PHONY : say-hello/fast
 
-#=============================================================================
-# Target rules for targets named HelloWorld
+src/say-hello/hello.obj: src/say-hello/hello.cpp.obj
+.PHONY : src/say-hello/hello.obj
 
-# Build rule for target.
-HelloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HelloWorld
-.PHONY : HelloWorld
+# target to build an object file
+src/say-hello/hello.cpp.obj:
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.obj
+.PHONY : src/say-hello/hello.cpp.obj
 
-# fast build rule for target.
-HelloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f hello-exe/CMakeFiles/HelloWorld.dir/build.make hello-exe/CMakeFiles/HelloWorld.dir/build
-.PHONY : HelloWorld/fast
+src/say-hello/hello.i: src/say-hello/hello.cpp.i
+.PHONY : src/say-hello/hello.i
+
+# target to preprocess a source file
+src/say-hello/hello.cpp.i:
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.i
+.PHONY : src/say-hello/hello.cpp.i
+
+src/say-hello/hello.s: src/say-hello/hello.cpp.s
+.PHONY : src/say-hello/hello.s
+
+# target to generate assembly for a file
+src/say-hello/hello.cpp.s:
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/src/say-hello/hello.cpp.s
+.PHONY : src/say-hello/hello.cpp.s
 
 # Help Target
 help:
@@ -150,8 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HelloWorld"
 	@echo "... say-hello"
+	@echo "... src/say-hello/hello.obj"
+	@echo "... src/say-hello/hello.i"
+	@echo "... src/say-hello/hello.s"
 .PHONY : help
 
 
@@ -163,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /C/msys64/home/local_admin/HelloWorld/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

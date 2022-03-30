@@ -63,70 +63,101 @@ CMAKE_BINARY_DIR = /C/msys64/home/local_admin/HelloWorld/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/say_hello.dir/all
-all: CMakeFiles/HelloWorld.dir/all
+all: say-hello/all
+all: hello-exe/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: say-hello/preinstall
+preinstall: hello-exe/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/say_hello.dir/clean
-clean: CMakeFiles/HelloWorld.dir/clean
+clean: say-hello/clean
+clean: hello-exe/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/say_hello.dir
+# Directory level rules for directory hello-exe
 
-# All Build rule for target.
-CMakeFiles/say_hello.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/say_hello.dir/build.make CMakeFiles/say_hello.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/say_hello.dir/build.make CMakeFiles/say_hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/C/msys64/home/local_admin/HelloWorld/build/CMakeFiles --progress-num=3,4 "Built target say_hello"
-.PHONY : CMakeFiles/say_hello.dir/all
+# Recursive "all" directory target.
+hello-exe/all: hello-exe/CMakeFiles/HelloWorld.dir/all
+.PHONY : hello-exe/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/say_hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/say_hello.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 0
-.PHONY : CMakeFiles/say_hello.dir/rule
+# Recursive "preinstall" directory target.
+hello-exe/preinstall:
+.PHONY : hello-exe/preinstall
 
-# Convenience name for target.
-say_hello: CMakeFiles/say_hello.dir/rule
-.PHONY : say_hello
-
-# clean rule for target.
-CMakeFiles/say_hello.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/say_hello.dir/build.make CMakeFiles/say_hello.dir/clean
-.PHONY : CMakeFiles/say_hello.dir/clean
+# Recursive "clean" directory target.
+hello-exe/clean: hello-exe/CMakeFiles/HelloWorld.dir/clean
+.PHONY : hello-exe/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/HelloWorld.dir
+# Directory level rules for directory say-hello
+
+# Recursive "all" directory target.
+say-hello/all: say-hello/CMakeFiles/say-hello.dir/all
+.PHONY : say-hello/all
+
+# Recursive "preinstall" directory target.
+say-hello/preinstall:
+.PHONY : say-hello/preinstall
+
+# Recursive "clean" directory target.
+say-hello/clean: say-hello/CMakeFiles/say-hello.dir/clean
+.PHONY : say-hello/clean
+
+#=============================================================================
+# Target rules for target say-hello/CMakeFiles/say-hello.dir
 
 # All Build rule for target.
-CMakeFiles/HelloWorld.dir/all: CMakeFiles/say_hello.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/C/msys64/home/local_admin/HelloWorld/build/CMakeFiles --progress-num=1,2 "Built target HelloWorld"
-.PHONY : CMakeFiles/HelloWorld.dir/all
+say-hello/CMakeFiles/say-hello.dir/all:
+	$(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/depend
+	$(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/C/msys64/home/local_admin/HelloWorld/build/CMakeFiles --progress-num=3,4 "Built target say-hello"
+.PHONY : say-hello/CMakeFiles/say-hello.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/HelloWorld.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HelloWorld.dir/all
+say-hello/CMakeFiles/say-hello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say-hello/CMakeFiles/say-hello.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 0
-.PHONY : CMakeFiles/HelloWorld.dir/rule
+.PHONY : say-hello/CMakeFiles/say-hello.dir/rule
 
 # Convenience name for target.
-HelloWorld: CMakeFiles/HelloWorld.dir/rule
+say-hello: say-hello/CMakeFiles/say-hello.dir/rule
+.PHONY : say-hello
+
+# clean rule for target.
+say-hello/CMakeFiles/say-hello.dir/clean:
+	$(MAKE) $(MAKESILENT) -f say-hello/CMakeFiles/say-hello.dir/build.make say-hello/CMakeFiles/say-hello.dir/clean
+.PHONY : say-hello/CMakeFiles/say-hello.dir/clean
+
+#=============================================================================
+# Target rules for target hello-exe/CMakeFiles/HelloWorld.dir
+
+# All Build rule for target.
+hello-exe/CMakeFiles/HelloWorld.dir/all: say-hello/CMakeFiles/say-hello.dir/all
+	$(MAKE) $(MAKESILENT) -f hello-exe/CMakeFiles/HelloWorld.dir/build.make hello-exe/CMakeFiles/HelloWorld.dir/depend
+	$(MAKE) $(MAKESILENT) -f hello-exe/CMakeFiles/HelloWorld.dir/build.make hello-exe/CMakeFiles/HelloWorld.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/C/msys64/home/local_admin/HelloWorld/build/CMakeFiles --progress-num=1,2 "Built target HelloWorld"
+.PHONY : hello-exe/CMakeFiles/HelloWorld.dir/all
+
+# Build rule for subdir invocation for target.
+hello-exe/CMakeFiles/HelloWorld.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello-exe/CMakeFiles/HelloWorld.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /C/msys64/home/local_admin/HelloWorld/build/CMakeFiles 0
+.PHONY : hello-exe/CMakeFiles/HelloWorld.dir/rule
+
+# Convenience name for target.
+HelloWorld: hello-exe/CMakeFiles/HelloWorld.dir/rule
 .PHONY : HelloWorld
 
 # clean rule for target.
-CMakeFiles/HelloWorld.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/clean
-.PHONY : CMakeFiles/HelloWorld.dir/clean
+hello-exe/CMakeFiles/HelloWorld.dir/clean:
+	$(MAKE) $(MAKESILENT) -f hello-exe/CMakeFiles/HelloWorld.dir/build.make hello-exe/CMakeFiles/HelloWorld.dir/clean
+.PHONY : hello-exe/CMakeFiles/HelloWorld.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
