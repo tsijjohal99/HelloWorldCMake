@@ -10,8 +10,8 @@ set(MY_STRING "This is a string")
 set(MY_OTHER_STRING "This is a string")
 set(my_value 4)
 
-foreach(item IN ITEMS foo bar baz qaz)
-    message(STATUS "Item is: ${item}")
+foreach(idx RANGE 0 99 5)
+    message(STATUS "Item is: ${idx}")
 endforeach()
 
 add_subdirectory(say-hello)
