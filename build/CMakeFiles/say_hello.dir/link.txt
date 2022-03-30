@@ -1,0 +1,2 @@
+C:/msys64/mingw64/bin/ar.exe qc libsay_hello.a CMakeFiles/say_hello.dir/src/hello.cpp.obj
+C:/msys64/mingw64/bin/ranlib.exe libsay_hello.a
