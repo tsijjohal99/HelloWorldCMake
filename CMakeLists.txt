@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(HelloWorld VERSION 1.0)
 
+set(MY_VARIABLE "I am a variable")
+message(STATUS "The variable value is: " ${PROJECT_VERSION}*)
+
 add_subdirectory(say-hello)
 add_subdirectory(hello-exe)
 
