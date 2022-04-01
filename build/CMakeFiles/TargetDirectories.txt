@@ -1,8 +1,0 @@
-C:/msys64/home/local_admin/HelloWorld/build/CMakeFiles/edit_cache.dir
-C:/msys64/home/local_admin/HelloWorld/build/CMakeFiles/rebuild_cache.dir
-C:/msys64/home/local_admin/HelloWorld/build/say-hello/CMakeFiles/say-hello.dir
-C:/msys64/home/local_admin/HelloWorld/build/say-hello/CMakeFiles/edit_cache.dir
-C:/msys64/home/local_admin/HelloWorld/build/say-hello/CMakeFiles/rebuild_cache.dir
-C:/msys64/home/local_admin/HelloWorld/build/hello-exe/CMakeFiles/HelloWorld.dir
-C:/msys64/home/local_admin/HelloWorld/build/hello-exe/CMakeFiles/edit_cache.dir
-C:/msys64/home/local_admin/HelloWorld/build/hello-exe/CMakeFiles/rebuild_cache.dir
